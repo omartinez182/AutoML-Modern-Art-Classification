@@ -1,1 +1,1 @@
-# AutoML-Moder-Art-Classification
+# AutoML-Modern-Art-Classification
