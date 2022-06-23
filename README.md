@@ -37,5 +37,5 @@ pip install -r requirements.txt
 To train the model you can run:
 
 ```
-ludwig train --config rotten_tomatoes.yaml --dataset data/raw/.csv
+ludwig train --config .yaml --dataset data/raw/.csv
 ```
