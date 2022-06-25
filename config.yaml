@@ -40,7 +40,7 @@ hyperopt:
       categories: [sgd, adam, adagrad]
     review_content.embedding_size:
       space: choice
-      categories: [128, 9000]
+      categories: [128, 256]
   search_alg:
     type: variant_generator
   executor:
