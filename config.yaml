@@ -24,25 +24,3 @@ output_features:
 
 trainer:
   epochs: 5
-
-hyperopt:
-  goal: maximize
-  output_feature: label
-  metric: accuracy
-  split: validation
-  parameters:
-    training.learning_rate:
-      space: loguniform
-      lower: 0.0001
-      upper: 0.1
-    training.optimizer.type:
-      space: choice
-      categories: [sgd, adam, adagrad]
-  search_alg:
-    type: variant_generator
-  executor:
-    type: ray
-    scheduler:
-      type: async_hyperband
-      time_attr: training_iteration
-      reduction_factor: 4    
