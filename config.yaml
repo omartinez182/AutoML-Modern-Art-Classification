@@ -38,10 +38,11 @@ hyperopt:
     training.optimizer.type:
       space: choice
       categories: [sgd, adam, adagrad]
-    review_content.embedding_size:
-      space: choice
-      categories: [128, 256]
   search_alg:
     type: variant_generator
   executor:
-    num_samples: 10
+    type: ray
+    scheduler:
+      type: async_hyperband
+      time_attr: training_iteration
+      reduction_factor: 4    
