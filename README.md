@@ -41,17 +41,15 @@ pip install -r requirements.txt
 
 ## Usage
 
-To train the model you can run:
+To train the model and test different architectures you can run:
 
 ```
-ludwig train --config config.yaml --dataset data/raw/Modern_Art.csv
+python model_training.py
 ```
 
-To run hyperparameter optimization you can run:
+## Dataset
 
-```
-ludwig hyperopt --config config.yaml --dataset data/raw/Modern_Art.csv
-```
+To get the required data, I used the information provided publicly in [The Museum of Modern Art (MoMA) Collection repository](https://github.com/MuseumofModernArt/collection/tree/v1.6); then I scraped publicly available images for each artwork and also the location within the museum.
 
 
 ## Disclaimer
