@@ -55,7 +55,7 @@ Additionally, plots for the learning curves (loss and accuracy) can be found und
 
 ## Dataset
 
-To get the required data I used the dataset placed under the public domain from The Museum of Modern Art (MoMA) Collection repository. [The Museum of Modern Art (MoMA) Collection repository](https://github.com/MuseumofModernArt/collection/tree/v1.6).
+To get the required data I used the dataset placed under the public domain from [The Museum of Modern Art (MoMA) Collection repository](https://github.com/MuseumofModernArt/collection/tree/v1.6).
 
 
 ## Disclaimer
