@@ -1,5 +1,6 @@
 [![Build test with Github Actions](https://github.com/omartinez182/AutoML-Modern-Art-Classification/actions/workflows/main.yml/badge.svg)](https://github.com/omartinez182/AutoML-Modern-Art-Classification/actions/workflows/main.yml)
 
+
 # AutoML for Modern Art Classification
 
 This AutoML solution leverages [Ludwig](https://ludwig-ai.github.io/ludwig-docs/0.5/index.html),
@@ -53,9 +54,14 @@ To train the model and test different architectures you can run:
 python model_training.py
 ```
 
+
+## Results
+![Accuracy Learning Curve](https://raw.githubusercontent.com/omartinez182/AutoML-Modern-Art-Classification/main/visualizations/learning_curves_label_accuracy.png)
+
 The results of the experiment are saved under ```data``` -> ```results```.
 
 Additionally, plots for the learning curves (loss and accuracy) can be found under the ```visualizations``` folder.
+
 
 ## Dataset
 
