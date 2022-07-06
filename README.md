@@ -49,6 +49,10 @@ To train the model and test different architectures you can run:
 python model_training.py
 ```
 
+The results of the experiment are saved under ```data``` -> ```results```.
+
+Additionally, plots for the learning curves (loss and accuracy) can be found under the ```visualizations``` folder.
+
 ## Dataset
 
 To get the required data, I used the information provided publicly in [The Museum of Modern Art (MoMA) Collection repository](https://github.com/MuseumofModernArt/collection/tree/v1.6); then I scraped publicly available images for each artwork and also the location within the museum.
