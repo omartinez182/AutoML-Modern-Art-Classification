@@ -3,6 +3,8 @@
 This AutoML solution leverages [Ludwig](https://ludwig-ai.github.io/ludwig-docs/0.5/index.html),
 to train, evaluate, and deploy a model that classifies artwork based on image embeddings.
 
+The goal is to do binary classification to predict whether a painting belongs to the "Oil" category or not. In this process, we test different architectures and take advantage of Ludwig's AutoML features to select the best one based on performance (accuracy).
+
 
 ## Getting Started
 
