@@ -7,6 +7,8 @@ to train, evaluate, and deploy a model that classifies artwork based on image em
 
 The goal is to do binary classification to predict whether a painting belongs to the "Oil" category or not. In this process, we test different architectures and take advantage of Ludwig's AutoML features to select the best one based on performance (accuracy).
 
+![AutoML_Art_Classification](https://user-images.githubusercontent.com/63601717/177655332-b7de4bb8-6889-4586-b07c-8246c99815c1.jpeg)
+
 
 ## Getting Started
 
