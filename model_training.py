@@ -35,7 +35,9 @@ FullyConnectedLayers = namedtuple("FullyConnectedLayers", ["name", "fc_layers"])
 
 list_of_fc_layers = [
     FullyConnectedLayers(name="Option1", fc_layers=[{"output_size": 64}]),
-    FullyConnectedLayers(name="Option2", fc_layers=[{"output_size": 128}, {"output_size": 64}]),
+    FullyConnectedLayers(
+        name="Option2", fc_layers=[{"output_size": 128}, {"output_size": 64}]
+    ),
     FullyConnectedLayers(name="Option3", fc_layers=[{"output_size": 128}]),
 ]
 
@@ -44,12 +46,14 @@ list_of_train_stats = []
 # Load dataset
 df = pd.read_csv("data/raw/Modern_Art.csv")
 X, y = df.image_path, df.label
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.20, random_state=42
+)
 training_set = pd.concat([X_train, y_train], axis=1)
 test_set = pd.concat([X_test, y_test], axis=1)
 
 # Change directory to save logs inside the data folder
-os.chdir('data/')
+os.chdir("data/")
 
 # Train models
 for model_option in list_of_fc_layers:
@@ -72,19 +76,27 @@ for model_option in list_of_fc_layers:
     )
 
     # Save training stats for later use
-    list_of_train_stats.append(TrainingResult(name=model_option.name, train_stats=train_stats))
+    list_of_train_stats.append(
+        TrainingResult(name=model_option.name, train_stats=train_stats)
+    )
 
     print(">>>>>>> completed: ", model_option.name, "\n")
 
-os.chdir('../')
+os.chdir("../")
 
 # Generating learning curves from training
 option_names = [trs.name for trs in list_of_train_stats]
 train_stats = [trs.train_stats for trs in list_of_train_stats]
 learning_curves(
-    train_stats, "Survived", model_names=option_names, output_directory="./visualizations", file_format="png"
+    train_stats,
+    "Survived",
+    model_names=option_names,
+    output_directory="./visualizations",
+    file_format="png",
 )
 
 # Confustion matrix by model
-train_metadata_json = load_json('./data/results/multiple_experiment_Option1/model/training_set_metadata.json')
-models_list = ['Option1', 'Option2', 'Option3']
+train_metadata_json = load_json(
+    "./data/results/multiple_experiment_Option1/model/training_set_metadata.json"
+)
+models_list = ["Option1", "Option2", "Option3"]
