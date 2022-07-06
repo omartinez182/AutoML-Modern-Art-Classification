@@ -7,7 +7,8 @@ import pandas as pd
 from collections import namedtuple
 from ludwig.api import LudwigModel
 from ludwig.constants import TRAINER
-from ludwig.visualize import learning_curves
+from ludwig.utils.data_utils import load_json
+from ludwig.visualize import learning_curves, confusion_matrix
 from sklearn.model_selection import train_test_split
 
 # Clean out old results
@@ -83,3 +84,7 @@ train_stats = [trs.train_stats for trs in list_of_train_stats]
 learning_curves(
     train_stats, "Survived", model_names=option_names, output_directory="./visualizations", file_format="png"
 )
+
+# Confustion matrix by model
+train_metadata_json = load_json('./data/results/multiple_experiment_Option1/model/training_set_metadata.json')
+models_list = ['Option1', 'Option2', 'Option3']
