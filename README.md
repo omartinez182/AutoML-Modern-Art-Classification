@@ -1,3 +1,5 @@
+[![Build test with Github Actions](https://github.com/omartinez182/AutoML-Modern-Art-Classification/actions/workflows/main.yml/badge.svg)](https://github.com/omartinez182/AutoML-Modern-Art-Classification/actions/workflows/main.yml)
+
 # AutoML for Modern Art Classification
 
 This AutoML solution leverages [Ludwig](https://ludwig-ai.github.io/ludwig-docs/0.5/index.html),
