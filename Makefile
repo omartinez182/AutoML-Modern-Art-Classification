@@ -2,9 +2,6 @@ install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
 
-test:
-	#python -m pytest -vv test_data.py
-
 format:
 	black *.py
 
@@ -13,5 +10,8 @@ lint:
 
 train-ludwig:
 	time ludwig train --config config.yaml --dataset data/raw/Modern_Art.csv
+
+test:
+	#python -m pytest -vv test_data.py
 
 all: install format lint test
