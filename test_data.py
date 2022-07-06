@@ -5,7 +5,9 @@ from deepchecks.tabular.checks import ConflictingLabels
 
 # Load dataset
 df = pd.read_csv("data/raw/Modern_Art.csv")
-dataset = Dataset(df, cat_features=['image_path'], label='label', features=['image_path'])
+dataset = Dataset(
+    df, cat_features=["image_path"], label="label", features=["image_path"]
+)
 
 # References:
 # https://docs.deepchecks.com/stable/checks_gallery/tabular/data_integrity/plot_data_duplicates.html
