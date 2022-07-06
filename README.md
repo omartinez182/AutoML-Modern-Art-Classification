@@ -13,14 +13,14 @@ cd AutoML-Modern-Art-Classification/
 virtualenv venv
 ```
 
-2) Activate the virtual environment. (Mac)
+2) Activate the virtual environment.
   
-  Mac:
+- Mac:
 ```
 source venv/bin/activate
 ```
 
-  Windows :
+- Windows :
 
 ```
 .\venv\Scripts\activate
