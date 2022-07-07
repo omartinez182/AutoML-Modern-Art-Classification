@@ -8,7 +8,7 @@ from collections import namedtuple
 from ludwig.api import LudwigModel
 from ludwig.constants import TRAINER
 from ludwig.utils.data_utils import load_json
-from ludwig.visualize import learning_curves, confusion_matrix
+from ludwig.visualize import learning_curves
 from sklearn.model_selection import train_test_split
 
 # Clean out old results
