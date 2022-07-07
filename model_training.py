@@ -94,9 +94,3 @@ learning_curves(
     output_directory="./visualizations",
     file_format="png",
 )
-
-# Confustion matrix by model
-train_metadata_json = load_json(
-    "./data/results/multiple_experiment_Option1/model/training_set_metadata.json"
-)
-models_list = ["Option1", "Option2", "Option3"]
