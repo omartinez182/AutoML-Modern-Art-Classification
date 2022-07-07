@@ -7,7 +7,6 @@ import pandas as pd
 from collections import namedtuple
 from ludwig.api import LudwigModel
 from ludwig.constants import TRAINER
-from ludwig.utils.data_utils import load_json
 from ludwig.visualize import learning_curves
 from sklearn.model_selection import train_test_split
 
@@ -24,7 +23,7 @@ for f in file_list:
         pass
 
 # Read in base configd
-with open("./config.yaml") as f:
+with open("./config.yaml", encoding="utf-8") as f:
     base_model = yaml.safe_load(f.read())
 
 # Specify named tuple to keep track of training results
