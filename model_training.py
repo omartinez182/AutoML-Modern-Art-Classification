@@ -10,6 +10,7 @@ from ludwig.constants import TRAINER
 from ludwig.visualize import learning_curves
 from sklearn.model_selection import train_test_split
 
+# Reference: https://github.com/ludwig-ai/ludwig/tree/master/examples/mnist
 # Clean out old results
 shutil.rmtree("./results", ignore_errors=True)
 shutil.rmtree("./visualizations", ignore_errors=True)
@@ -22,7 +23,7 @@ for f in file_list:
     except FileNotFoundError:
         pass
 
-# Read in base configd
+# Read in base config
 with open("./config.yaml", encoding="utf-8") as f:
     base_model = yaml.safe_load(f.read())
 
