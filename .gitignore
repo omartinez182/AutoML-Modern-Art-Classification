@@ -10,3 +10,7 @@ venv.bak/
 # Results
 .results
 results/
+
+# Data
+.images
+images/
